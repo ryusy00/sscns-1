@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// 회사연혁 버튼 클릭 시, 다음 년도로 넘어가는 애니메이션
+// 회사연혁 영역 - 연도별 내용
 let currentTimeline = 0;
 
 const timelines = [
@@ -100,7 +100,7 @@ const timelines = [
         }
     ]
 ];
-
+// 회사연혁 버튼 클릭 시, 다음 년도로 넘어가는 애니메이션
 function showMore(timelineIndex) {
     const timeline = timelines[timelineIndex];
     const timelineContainer = document.querySelector('.timeline');
@@ -132,7 +132,6 @@ function showMore(timelineIndex) {
     moreBtn.setAttribute('onclick', `showMore(${currentTimeline})`);
     timelineContainer.appendChild(moreBtn);
 }
-
 document.addEventListener("DOMContentLoaded", () => {
     showMore(0);
 });

@@ -248,13 +248,11 @@ body {
     border-right: .15em solid #fff;
     animation: typing 5s steps(40, end) infinite, blink-caret .90s step-end infinite;
 }
-/* 타이핑 애니메이션 */
-@keyframes typing {
+@keyframes typing { /* 타이핑 애니메이션 */
     from { width: 0; }
     to { width: 43ch; }
 }
-/* 캐럿 깜박임 애니메이션 */
-@keyframes blink-caret {
+@keyframes blink-caret {  /* 캐럿 깜박임 애니메이션 */
     from, to { border-color: transparent; }
     50% { border-color: white; }
 }
@@ -271,7 +269,6 @@ body {
     font-size: 30px;
     color: #fff;
 }
-
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -285,7 +282,7 @@ body {
 }
 /* 사업 소개 영역 */
 #business-wrap {
-    margin-top: 120px;
+    margin-top: 200px;
     width: 100%;
     height: 2000px;
 }
@@ -297,19 +294,20 @@ body {
     align-items: center;
     margin-bottom: 100px;
 }
-#business-text-wrap > h3{
+#business-text-wrap > h3 {
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 600;   
     color: #B5241F;
 }
 #business-text-wrap > p {
-    margin-top: 10px;
+    margin-top: 30px;
     text-align: center;
     font-size: 20px;
     font-weight: 450;
 }
 #business-content-wrap {
-    width: 1560px;
+    width: 1420px;
+    height: auto;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -321,129 +319,26 @@ body {
 }
 #business-main > a {
     margin-bottom: 2%;
-}
-/* 시스템 통합 */
-#si-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#si-content > p {
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    font-size: 18px;
-    text-align: center;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.9);
-}
-#si-wrap {
     position: relative;
     z-index: 9;
 }
-#si-modal {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #fff;
-    z-index: 10;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-#si-wrap:hover #si-modal {
-    opacity: 1;
-    visibility: visible;
-}
-#si-modal-text {
-    margin-top: 270px;
-}
-.si-title {
-    font-size: 30px;
-    font-weight: 500;
-}
-.si-explain {
-    padding-top: 20px;
-    font-size: 20px;   
-}
-/* IT 컨설팅 */
-#IC-content {
+#business-main > a > div {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#IC-content > p {
+#business-main > a > div > p{
     width: 100%;
-    height: 50px;
-    line-height: 50px;
-    font-size: 18px;
-    text-align: center;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.9);
-}
-#IC-wrap {
-    position: relative;
-    z-index: 9;
-}
-#IC-modal {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #fff;
-    z-index: 10;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-#IC-wrap:hover #IC-modal {
-    opacity: 1;
-    visibility: visible;
-}
-#IC-modal-text {
-    margin-top: 270px;
-}
-.IC-title {
-    font-size: 30px;
-    font-weight: 500;
-}
-.IC-explain {
-    padding-top: 20px;
+    height: 55px;
+    line-height: 55px;
     font-size: 20px;
-}
-/* 아웃소싱 */
-#OS-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#OS-content > p {
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    font-size: 18px;
     text-align: center;
     color: #fff;
     background-color: rgba(0, 0, 0, 0.9);
 }
-#OS-wrap {
-    position: relative;
-    z-index: 9;
-}
-#OS-modal {
+#modal {
     position: absolute;
-    top: 0;
+    top: 0; 
     left: 0;
     width: 100%;
     height: 100%;
@@ -453,74 +348,24 @@ body {
     align-items: center;
     color: #fff;
     z-index: 10;
-    text-align: center;
     opacity: 0;
+    text-align: center;
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-#OS-wrap:hover #OS-modal {
+#business-main > a:hover #modal {
     opacity: 1;
     visibility: visible;
 }
-#OS-modal-text {
+#modal-text {
     margin-top: 270px;
 }
-.OS-title {
-    font-size: 30px;
+.title {
+    font-size: 28px;
     font-weight: 500;
 }
-.OS-explain {
-    padding-top: 20px;
-    font-size: 20px;
-}
-/* 솔루션 */
-#SL-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#SL-content > p {
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    font-size: 18px;
-    text-align: center;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.9);
-}
-#SL-wrap {
-    position: relative;
-    z-index: 9;
-}
-#SL-modal {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #fff;
-    z-index: 10;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-#SL-wrap:hover #SL-modal {
-    opacity: 1;
-    visibility: visible;
-}
-#SL-modal-text {
-    margin-top: 270px;
-}
-.SL-title {
-    font-size: 30px;
-    font-weight: 500;
-}
-.SL-explain {
-    padding-top: 20px;
-    font-size: 20px;
+.explain {
+    padding-top: 30px;
+    font-size: 18px;   
 }
 #more-btn {
     font-size: 27px;
@@ -536,7 +381,6 @@ body {
 #more-btn > a {
     color: black;
 }
-
 /* 회사 연혁 영역 */
 #history-wrap {
     width: 100%;
@@ -598,7 +442,7 @@ body {
     border-radius: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 0.5s ease-in;
 }
 @keyframes fadeIn {
     from {
@@ -864,6 +708,14 @@ body {
     padding-left: 10%;
     padding-top: 10%;
 }
+.info > li {
+    font-size: 20px;
+    line-height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
 .info > li:nth-child(1) > h3 {
     width: 110px;
 }
@@ -874,14 +726,6 @@ body {
 .info > li > h3 {
     font-size: 24px;
     font-weight: 600;
-}
-.info > li {
-    font-size: 20px;
-    line-height: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 35px;
 }
 .icon-wrap {
     display: flex;
