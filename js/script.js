@@ -148,8 +148,7 @@ window.addEventListener('scroll', function() {
     var triggerPosition4 = document.getElementById('OS-wrap').offsetTop - window.innerHeight;
     var triggerPosition5 = document.getElementById('more-btn').offsetTop - window.innerHeight;
     var triggerPosition6 = document.getElementById('history-wrap').offsetTop - window.innerHeight;
-    var triggerPosition7 = document.getElementById('contact-title-wrap').offsetTop - window.innerHeight;
-    var triggerPosition8 = document.getElementById('contact-content-wrap').offsetTop - window.innerHeight;
+    var triggerPosition7 = document.getElementById('contact-wrap').offsetTop - window.innerHeight;
 
 
     // 인재채용 영역 원 확대 애니메이션
@@ -180,12 +179,9 @@ window.addEventListener('scroll', function() {
         document.getElementById('history-content-wrap').classList.add('animated');
     }
     if (scrollPosition > triggerPosition7) {
-        document.getElementById('contact-title-wrap').classList.add('animated');
-    }
-    if (scrollPosition > triggerPosition8) {
         document.getElementById('bg-logo').classList.add('animated');
-        document.getElementById('contact-left').classList.add('animated');
-        document.getElementById('contact-right').classList.add('animated');
+        document.getElementById('contact-title-wrap').classList.add('animated');
+        document.getElementById('contact-content-wrap').classList.add('animated');
     }
     
 });
