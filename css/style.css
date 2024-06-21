@@ -576,9 +576,6 @@ body {
 .recruit-txt > p {
     font-size: 17px;
 }
-/* #passion {
-    padding-left: 20px;
-} */
 .animate-circle {
     animation: circle-animation 2s ease forwards;
 }
